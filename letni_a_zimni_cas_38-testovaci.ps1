@@ -83,7 +83,7 @@ $pole_file_historie_ulozit = @()
 $dr = (get-date).DayOfYear # aktualni den v roce
 $hh = (Get-Date).Hour # aktualni hodina atd.
 
-############################################################################
+################# zde testovaci ###########################################
 
 #$dr = 130
 $dr = 29 # aktualni den v roce - testovaci radek 1 
