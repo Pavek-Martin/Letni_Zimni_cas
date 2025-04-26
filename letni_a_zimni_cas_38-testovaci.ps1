@@ -5,7 +5,7 @@
 $dnu_navic = 7
 $d = "Sunday" # nedele pro Cechy
 [string] $letos_rok = (Get-Date).Year
-#$letos_rok = "2027" # testovaci radek
+$letos_rok = "2030" # testovaci radek
 
 <#
 posledeni nedele v breznu a rijnu je pohyblivy udaj co se tyce cisla dne
@@ -28,7 +28,7 @@ if ((( $den_v_breznu.Month -eq 3 ) -and ( $den_v_breznu.DayOfWeek -like $d ) -an
 break
 }
 }
-#echo $den_v_breznu
+echo $den_v_breznu
 #$posledni_nedele_brezen = $den_v_breznu.Day
 #echo $posledni_nedele_brezen #int32
 $posledni_nedele_brezen_den_v_roce = $den_v_breznu.DayOfYear # type int32
@@ -46,7 +46,7 @@ if ((( $den_v_rijnu.Month -eq 10 ) -and ( $den_v_rijnu.DayOfWeek -like $d ) -and
 break
 }
 }
-#echo $den_v_rijnu
+echo $den_v_rijnu
 #$posledni_nedele_rijen = $den_v_rijnu.Day
 #echo $posledni_nedele_rijen #int32
 $posledni_nedele_rijen_den_v_roce = $den_v_rijnu.DayOfYear
@@ -83,7 +83,7 @@ $pole_file_historie_ulozit = @()
 $dr = (get-date).DayOfYear # aktualni den v roce
 $hh = (Get-Date).Hour # aktualni hodina atd.
 
-################# zde testovaci ###########################################
+############################################################################
 
 #$dr = 130
 $dr = 29 # aktualni den v roce - testovaci radek 1 
