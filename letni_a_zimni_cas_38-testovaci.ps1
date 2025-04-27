@@ -2,9 +2,9 @@
 
 # nastaveni casu v pocitaci posun na letni nebo zimni cas
 
-$dnu_navic = 7
 $d = "Sunday" # nedele pro Cechy
-[string] $letos_rok = (Get-Date).Year
+#[string] $letos_rok = (Get-Date).Year
+
 $letos_rok = "2030" # testovaci radek
 
 <#
@@ -21,10 +21,9 @@ tohle to bylo zapotreby vzit v uvahu
 $start_cas_brezen = "03/24/" + $letos_rok + " 02:00:00"
 #echo $start_cas_brezen
 $brezen = [datetime] $start_cas_brezen
-for ($aa = 0; $aa -le 7; $aa++ ) { # -le 7
+for ($aa = 1; $aa -le 7; $aa++ ) { # -le 7
 $den_v_breznu = $brezen.AddDays(+$aa)
-$rozdil_mesic_brezen = $den_v_breznu.AddDays($dnu_navic).Month
-if ((( $den_v_breznu.Month -eq 3 ) -and ( $den_v_breznu.DayOfWeek -like $d ) -and ( $rozdil_mesic_brezen -eq $den_v_breznu.Month + 1 ))) {
+if (( $den_v_breznu.Month -eq 3 ) -and ( $den_v_breznu.DayOfWeek -like $d )) {
 break
 }
 }
@@ -39,10 +38,9 @@ echo "$posledni_nedele_brezen_den_v_roce cislo dne, posledni nedele v Breznu"
 $start_cas_rijen = "10/24/" + $letos_rok + " 03:00:00"
 #echo $start_cas_rijen
 $rijen = [datetime] $start_cas_rijen
-for ($bb = 0; $bb -le 7; $bb++ ) {
+for ($bb = 1; $bb -le 7; $bb++ ) {
 $den_v_rijnu = $rijen.AddDays(+$bb)
-$rozdil_mesic_rijen = $den_v_rijnu.AddDays($dnu_navic).Month
-if ((( $den_v_rijnu.Month -eq 10 ) -and ( $den_v_rijnu.DayOfWeek -like $d ) -and ( $rozdil_mesic_rijen -eq $den_v_rijnu.Month + 1 ))) {
+if (( $den_v_rijnu.Month -eq 10 ) -and ( $den_v_rijnu.DayOfWeek -like $d )) {
 break
 }
 }
@@ -83,7 +81,7 @@ $pole_file_historie_ulozit = @()
 $dr = (get-date).DayOfYear # aktualni den v roce
 $hh = (Get-Date).Hour # aktualni hodina atd.
 
-############################################################################
+############# testovani zde ################################################
 
 #$dr = 130
 $dr = 29 # aktualni den v roce - testovaci radek 1 
