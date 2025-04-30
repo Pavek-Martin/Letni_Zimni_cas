@@ -1,0 +1,5 @@
+https://stackoverflow.com/questions/6385190/correctness-of-sakamotos-algorithm-to-find-the-day-of-week
+
+https://www.geeksforgeeks.org/tomohiko-sakamotos-algorithm-finding-day-week/
+
+https://en.m.wikipedia.org/wiki/Determination_of_the_day_of_the_week

@@ -1,11 +1,10 @@
 ﻿cls
 
 # nastaveni casu v pocitaci posun na letni nebo zimni cas
-
 $d = "Sunday" # nedele pro Cechy
 #[string] $letos_rok = (Get-Date).Year
 
-$letos_rok = "2030" # testovaci radek
+$letos_rok = "2025" # testovaci radek
 
 <#
 posledeni nedele v breznu a rijnu je pohyblivy udaj co se tyce cisla dne
@@ -84,8 +83,8 @@ $hh = (Get-Date).Hour # aktualni hodina atd.
 ############# testovani zde ################################################
 
 #$dr = 130
-$dr = 29 # aktualni den v roce - testovaci radek 1 
-$hh = 10 # aktualni hodina - testovaci radek 2
+#$dr = 29 # aktualni den v roce - testovaci radek 1 
+#$hh = 10 # aktualni hodina - testovaci radek 2
 
 ############################################################################
 
@@ -256,4 +255,4 @@ $out_2 = "{0:dd.MM.yyyy ve HH.mm.ss}" -f $den_v_rijnu
 Write-host -ForegroundColor Red "dne $out_2 hodiny, se preslo na zimni cas -1 hodina, upravte si proto prosim systemovy cas !"
 }
 
-sleep 10
+#sleep 10
