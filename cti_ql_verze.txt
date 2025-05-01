@@ -1,0 +1,47 @@
+
+puvodne jsem zamyslel ze by program "ZmenaCas" fungoval takto:
+za prve by si po pusteni nacetl soubor historie "HistCas" z neho
+by si vzal dve informace z predesleho spusteni programu
+nacetl by prvni radek a hodnotu ulozil do promenne "hist_usek"
+a druhy radek by ulozil do promenne "hist_suma" (cislo dne)
+problem ale nastane pri uplne prvnim spusteni programu kdy soubor 
+"HistCas" jeste neexistuje zde bylo programu potreba rict ze v takovem
+pripade pouze do souboru "HistCas" zapis aktualni informace coz je
+promenna "usek" a promenna "suma" (aktualni cislo dne)
+predcasne se ukonci a cekej v tomto stavu na dalsi spusteni,
+po dalsim spusteni jiz bude soubor "HistCas" existovat, nacti jeho 
+obsah, zaroven zjisti udaje aktualni a porovne je navzajem
+
+bohuzel jsem ani po dlouhem hledani nenasel funkci tipu,
+"file exist" apod. slo o to neotevirat soubor historie rovnou
+ale napred se podivat jestli existuje aby bylo z ceho nacitat
+takze pri uplne prvni spusteni program soubor nenasel a koncil chybou
+na internetu jsem nasel ze existuje nejaka funkce "on error goto ..."
+nefungovala, tohle se mi vyresit nepodarilo, kdyby nekdo vedel co stim
+tak budu rad.
+takze v dusledku tohohle vzniknul dalsi soubor "CreateHistFile" nebo 
+vlastne dva souboru "CreateHistFile" a jeste "CreateHistSelect"
+prvni jmenovany dela to ze po spusteni vytvori novy soubor "HistCas"
+a zapise do nej aktualni zjestene informace a potom kdyz soubor historie
+jiz existuje je teprve mozne spustit samotny soubor "ZmenaCas"m a program
+jiz ma z ceho nacitat a druhy jmenovany tedy "CreateHistSelect" slouzil
+hlavne pri testovani programu ale davam ho jsem taky a dela to ze se
+zapta jaky usek roku (volba je 1-3) ma do souboru historie zapsat
+takze na prvni radku souboru "HistCas" bude hodnota 1,2, nebo 3
+a druhy radek je pak cislo dne ktere spada do danemu useku.
+
+musim jeste upozorni na program "SakamotoTest" ktery v soucinnosti 
+s linuxovimi scripty "kontrola_ql.sh" a  "test_ql.sh" provede kontrolu
+vysledku Samamoto algoritmu a porovna je z verohodny a myslim i znamym
+programem "cal" na linuxu, tyto testy jsem jiz provedl, vysledky jsou ve
+screenshotech a bylo vnich 100% shoda
+
+
+jeste takovej malej dodatek:
+jeste druha vec u ktere jsem nevedel a nepodarilo se mi ji vyresit
+bylo jak zakazat potvrzeni o prepasni souboru historie, kdy se program 
+dozadoval toho aby uzivatel potvrdil opetovni zapis do souboru, proste
+je tam nutny zmackout "Y" a bez roho to asi nepujde, nevim
+
+1.5.2025
+
