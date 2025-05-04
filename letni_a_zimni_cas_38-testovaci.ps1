@@ -2,9 +2,9 @@
 
 # nastaveni casu v pocitaci posun na letni nebo zimni cas
 $d = "Sunday" # nedele pro Cechy
-#[string] $letos_rok = (Get-Date).Year
+[string] $letos_rok = (Get-Date).Year
 
-$letos_rok = "2025" # testovaci radek
+#$letos_rok = "2025" # testovaci radek
 
 <#
 posledeni nedele v breznu a rijnu je pohyblivy udaj co se tyce cisla dne
@@ -156,11 +156,15 @@ $pole_file_historie_ulozit += $dr
 #echo $dr # slozilo pri testovani
 
 
-#$cesta_soubor_historie = "C:\Users\DELL\Documents\zaloha\"
-$cesta_soubor_historie = "R:\"
-$nazev_souboru_historie = "historie.txt"
+# nastaveni cest a nazvu souboru historie
+$cesta_soubor_historie = "C:\Users\DELL\Documents\zaloha\"
+#$cesta_soubor_historie = "R:\"
+#$nazev_souboru_historie = "historie.txt"
+$nazev_souboru_historie = "historie_letni_zimni_cas.txt"
 $file = $cesta_soubor_historie + $nazev_souboru_historie
 #echo $file"<<"
+
+
 
 # existuje jiz soubor historie ? paklize ne tak vytvor novy zapis do nej aktualni cislo usek roku 
 # a aktualni cislo dne, ukonci program a v tomto stavu cekej na dalsi spusteni
@@ -263,4 +267,4 @@ $out_2 = "{0:dd.MM.yyyy ve HH.mm.ss}" -f $den_v_rijnu
 Write-host -ForegroundColor Red "dne $out_2 hodiny, se preslo na zimni cas -1 hodina, upravte si proto prosim systemovy cas !"
 }
 
-#sleep 10
+sleep 10

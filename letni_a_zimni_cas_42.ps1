@@ -1,9 +1,11 @@
 ﻿cls
 
 # nastaveni casu v pocitaci posun na letni nebo zimni cas v ofline rezimu
-# 4.5 2025 pridana oprava radky 250-257, do historie bylo potreba zapsat ze nastal novy kalendarni rok (nebo 1 usek noveho roku)
+# v teto verzi se pouziva Samamoto algotitmus na zjisteni posledni nedele v breznu a rijnu, v aktualni roce
+
+# 4.5 2025 pridana oprava radky 252-259, do historie bylo potreba zapsat ze nastal novy kalendarni rok (nebo 1 usek noveho roku)
 # nejak sa na to mynule zapomelo, nedokazu si to vysvetlit
-# takze v dalsim roce roce bude opet jako prvni na rane podminka na radku 231
+# takze v dalsim roce roce bude opet jako prvni na rane podminka na radku 233
 
 $d = "Sunday" # nedele pro Cechy
 [string] $letos_rok = (Get-Date).Year

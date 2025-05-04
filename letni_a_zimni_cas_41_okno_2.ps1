@@ -1,5 +1,4 @@
 ﻿cls
-
 # nastaveni casu v pocitaci posun na letni nebo zimni cas v ofline rezimu
 
 $d = "Sunday" # nedele pro Cechy

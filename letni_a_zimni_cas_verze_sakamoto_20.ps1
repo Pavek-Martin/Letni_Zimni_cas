@@ -2,10 +2,19 @@
 
 # nastaveni casu v pocitaci posun na letni nebo zimni cas v ofline rezimu
 # v teto verzi se pouziva Samamoto algotitmus na zjisteni posledni nedele v breznu a rijnu, v aktualni roce
+# start of script ( store list existing variable names )
+$ExistingVariables = Get-Variable | Select-Object -ExpandProperty Name
 
+# v zahlavi spusteneho okna zobrazi informoce ( neco jako echo $0 v bash )
+[string] $scriptName = pwd
+$scriptName += "\"
+$scriptName += $MyInvocation.MyCommand.Name
+$host.UI.RawUI.WindowTitle = $scriptName
+
+#
 $letos_rok = (get-date).Year
 #echo $rok # int32
-$letos_rok = "2027" # testovaci radek - 1 ( aktualni rok )
+#$letos_rok = "2027" # testovaci radek - 1 ( aktualni rok )
 
 $mesic = (Get-Date).Month
 #echo $mesic
@@ -302,3 +311,4 @@ Write-host -ForegroundColor Red "   dne $den_v_rijnu ve 03:00:00 hodiny, se pres
 Read-Host -Prompt "   Press ENTER to exit"
 }
 
+#sleep 10
