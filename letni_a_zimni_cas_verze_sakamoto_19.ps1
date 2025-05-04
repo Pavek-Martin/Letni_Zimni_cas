@@ -1,57 +1,85 @@
 ﻿cls
 
 # nastaveni casu v pocitaci posun na letni nebo zimni cas v ofline rezimu
+# v teto verzi se pouziva Samamoto algotitmus na zjisteni posledni nedele v breznu a rijnu, v aktualni roce
 
-$d = "Sunday" # nedele pro Cechy
-[string] $letos_rok = (Get-Date).Year
-#$letos_rok = "2027" # testovaci radek
+$letos_rok = (get-date).Year
+#echo $rok # int32
+$letos_rok = "2027" # testovaci radek - 1 ( aktualni rok )
 
-<#
-posledni nedele v breznu a rijnu je pohyblivy udaj co se tyce cisla dne
-napr. pro rok 2025 je to neděle 30. března 2025 a cislo dne je 89
-ale pro rok 2026 je to neděle 29. března 2026 a cislo dne je 88
-rijen, rovnez pohyblivy napr.
-neděle 26. října 2025, 299
-neděle 25. října 2026, 298
-tohle to bylo zapotreby vzit v uvahu
-#>
+$mesic = (Get-Date).Month
+#echo $mesic
+$den = (Get-Date).Day
+#echo $den # int32
+$hh = (Get-Date).Hour
+echo $hh"< hodina ted"
 
-# --------------- brezen
-$start_cas_brezen = "03/24/" + $letos_rok + " 02:00:00"
-#echo $start_cas_brezen
-$brezen = [datetime] $start_cas_brezen
-for ($aa = 1; $aa -le 7; $aa++ ) { # -le 7
-$den_v_breznu = $brezen.AddDays(+$aa)
-if (( $den_v_breznu.Month -eq 3 ) -and ( $den_v_breznu.DayOfWeek -like $d )) {
-break
-}
+$pole_delka_mesice = @(31,99,31,30,31,30,31,31,30,31,30,31)
+# upravi se unor (99) podle toho jesli je prestupny rok nebo ne
+if (( $letos_rok % 4 -eq 0 ) -and (( $letos_rok % 100 -ne 0) -or ( $letos_rok % 400 -eq 0 ))) {
+$pole_delka_mesice[1]=29 # prestupni unor v $letos_rok
+}else{ $pole_delka_mesice[1]=28 
 }
 
-#echo $den_v_breznu
-#$posledni_nedele_brezen = $den_v_breznu.Day
-#echo $posledni_nedele_brezen #int32
-$posledni_nedele_brezen_den_v_roce = $den_v_breznu.DayOfYear # type int32
-#echo $posledni_nedele_brezen_den_v_roce
-#echo "$posledni_nedele_brezen_den_v_roce cislo dne, posledni nedele v Breznu"
-
-
-# ----------------- rijen 
-$start_cas_rijen = "10/24/" + $letos_rok + " 03:00:00"
-#echo $start_cas_rijen
-$rijen = [datetime] $start_cas_rijen
-for ($bb = 1; $bb -le 7; $bb++ ) {
-$den_v_rijnu = $rijen.AddDays(+$bb)
-if (( $den_v_rijnu.Month -eq 10 ) -and ( $den_v_rijnu.DayOfWeek -like $d )) {
-break
-}
+$dr = 0
+for ($aa = 0; $aa -le $mesic -2; $aa++) {
+$dr += $pole_delka_mesice[$aa]
 }
 
-#echo $den_v_rijnu
-#$posledni_nedele_rijen = $den_v_rijnu.Day
-#echo $posledni_nedele_rijen #int32
-$posledni_nedele_rijen_den_v_roce = $den_v_rijnu.DayOfYear
-#echo $posledni_nedele_rijen_den_v_roce
-#echo "$posledni_nedele_rijen_den_v_roce cislo dne, posledni nedele v Rijnu"
+$dr += $den
+echo $dr"< dnes den v roce"
+
+##########################    testovaci    ################################
+
+#$dr = 1 # testovaci radek -2 ( aktualni den v roce )
+#$hh = 1 # testovaci radek - 3  ( aktualni hodina ted )
+
+###########################################################################
+
+
+# Sakamoto algoritmus
+# return : 0 = nedele, 1 = pondeli, ..., 6 = sobota
+function Get-DayOfWeek($year, $month, $day) {
+# pole s posuny pro jednotlive mesice
+$t = @( 0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4 )
+# Pokud je mesic leden nebo unor, snizi rok o 1
+if ($month -lt 3) { $year = $year - 1 } # dulezite !
+# vypocita den v tydnu
+$dow = ($year + [math]::Floor($year / 4) - [math]::Floor($year / 100) + [math]::Floor($year / 400) + $t[$month - 1] + $day) % 7
+#write-host $dow 
+#write-host ktery nepouziva pipeline se muze pouzit takhle primo uvnitr funkce a nebude nicemu prekazet narozdil od "echo"
+return [int]$dow
+}
+
+
+# posledni nedele brezen ?
+$mesic_1 = 3
+#$mesic_1 = 6 lze libovolnej mesic ale bude vzdy posledni nedel v tomto mesici
+$pocet_dnu_v_mesici_brezen = $pole_delka_mesice[$mesic_1 -1]
+$den_v_tydnu_1 = Get-DayOfWeek $letos_rok $mesic_1 $pocet_dnu_v_mesici_brezen
+$posledni_nedele_brezen = $pocet_dnu_v_mesici_brezen - $den_v_tydnu_1
+$den_v_breznu = "$posledni_nedele_brezen.$mesic_1.$letos_rok"
+echo $den_v_breznu"< posledni nedele brezen"
+# cislo den brezen ?
+$posledni_nedele_brezen_den_v_roce = 0 # pri opakovenem spusteni v editoru porad pribivalo
+for ( $aa = 0; $aa -le $mesic_1 -2; $aa++ ) { $posledni_nedele_brezen_den_v_roce += $pole_delka_mesice[$aa] }
+$posledni_nedele_brezen_den_v_roce += $posledni_nedele_brezen
+echo $posledni_nedele_brezen_den_v_roce"< den v roce posledni nedele brezen"
+
+
+# posledni nedele rijen ?
+$mesic_2 = 10
+$pocet_dnu_v_mesici_rijen = $pole_delka_mesice[$mesic_2 -1]
+$den_v_tydnu_2 = Get-DayOfWeek $letos_rok $mesic_2 $pocet_dnu_v_mesici_rijen
+$posledni_nedele_rijen = $pocet_dnu_v_mesici_rijen - $den_v_tydnu_2
+$den_v_rijnu = "$posledni_nedele_rijen.$mesic_2.$letos_rok"
+echo $den_v_rijnu"< posledni nedele rijen"
+# cislo den rijen ?
+$posledni_nedele_rijen_den_v_roce = 0 # pri opakovenem spusteni v editoru porad pribivalo
+for ( $bb = 0; $bb -le $mesic_2 -2; $bb++ ) { $posledni_nedele_rijen_den_v_roce += $pole_delka_mesice[$bb] }
+$posledni_nedele_rijen_den_v_roce += $posledni_nedele_rijen
+echo $posledni_nedele_rijen_den_v_roce"< den v roce posledni nedele rijen"
+
 
 <#
 z predchozich informaci se vytvori "usek roku" z hodnotou 1,2 a nebo 3
@@ -77,22 +105,7 @@ az za dva dni potom apod. kdyby se na to zapomenlo tak se nic nestane a cas se u
 a nebo pozdeji dodatecne
 #>
 
-Remove-Variable usek_roku, pole_file_historie_ulozit, pole_file_historie_nacteno,dr,hh,dr_historie -ErrorAction SilentlyContinue
-Remove-Variable zapis_historii, cas_plus_hodina, cas_minus_hodina, file, out_1, out_2 -ErrorAction SilentlyContinue
-
 $pole_file_historie_ulozit = @()
-
-$dr = (get-date).DayOfYear # aktualni den v roce
-$hh = (Get-Date).Hour # aktualni hodina atd.
-
-###################    testovaci    ########################################
-
-#$dr  = 333 # aktualni den v roce - testovaci radek 1 
-#$hh = 1 # aktualni hodina - testovaci radek 2
-
-############################################################################
-
-#write-host -ForegroundColor Yellow "$dr aktualni cislo dne"
 
 $usek_roku = 0 # kvuli kontrolam chyb napred priradi hodnotu nula, kdyby byla nekde chyba tak zuste nula
 # a pride se podle toho na to, mohla by bejt hodnota $usek_roku = $null ale proc zbytecne prerusovat beh
@@ -110,25 +123,25 @@ $usek_roku = 0 # kvuli kontrolam chyb napred priradi hodnotu nula, kdyby byla ne
 # useku roku = 1 ?
 if ( $dr -lt $posledni_nedele_brezen_den_v_roce ) { # <
 # zacatek roku az jeden den pred posledni do nedele Brezen
-#echo "usek 1-A"
+echo "usek 1-A"
 $usek_roku = 1
 } elseif (( $dr -eq $posledni_nedele_brezen_den_v_roce ) -and ( $hh -lt 2 )) { # == -and <
 # je posledni nedele v breznu ale je mene nezli 02:00:00 hodin
-#echo "usek 1-B"
+echo "usek 1-B"
 $usek_roku = 1
 # usek = 2 ?
 } elseif (( $dr -eq $posledni_nedele_brezen_den_v_roce ) -and ( $hh -ge 2 )) { # == -and >=
 # je posledni nedele v breznu a cas je rovny a nebo vyssi nez 02:00:00 hodin 
-#echo "usek 2-A"
+echo "usek 2-A"
 $usek_roku = 2
 } elseif (( $dr -gt $posledni_nedele_brezen_den_v_roce ) -and ( $dr -lt $posledni_nedele_rijen_den_v_roce )) { # > -and <
 # je poledni nedele Brezen +1 den az do posledni nedele rijen -1 den
 $usek_roku = 2 
-#echo "usek 2-B"
+echo "usek 2-B"
 $usek_roku = 2
 } elseif (( $dr -eq $posledni_nedele_rijen_den_v_roce ) -and ( $hh -lt 3 )) { # == -and <
 # je posledni nedele rijen ale cas je mensi nezli 03:00:00
-#echo "usek 2-C"
+echo "usek 2-C"
 $usek_roku = 2
 # usek = 3 ?
 } elseif (( $dr -eq $posledni_nedele_rijen_den_v_roce ) -and ( $hh -ge 3 )) { # == -and >=
@@ -139,11 +152,11 @@ $usek_roku = 2
 # zapise jeste take cislo dne v roce, podminka pak bude : paklize je stejny den v roce v historii pri aktualnim spusteni programu 
 # a v historii je usek roku cislo 3 a aktualni je cislo useku je 2 tak - nedelej nic 
 # toto plati pouze hodinu vlastne,jenom do te doby nez plynouci systemovi cas zase o hodinu "dobehne" podminku :)
-#echo "usek 3-A"
+echo "usek 3-A"
 $usek_roku = 3
 } elseif ( $dr -gt $posledni_nedele_rijen_den_v_roce ) { # >
 # jakykoliv den v roce vyssi nez posledni nedele rijen
-#echo "usek 3-B"
+echo "usek 3-B"
 $usek_roku = 3
 # tady se uz pak neresi presupnej rok tzn. 365 nebo 366 dni v roce
 # ale proste jenom jestli je vyssi a prvniho ledna dalsiho roku se pak cislo dne opet vrati $dr=1
@@ -226,21 +239,21 @@ $cas_plus_hodina = 0
 $cas_minus_hodina = 0
 
 if (( $usek_roku_historie -eq 1 ) -and ( $usek_roku -eq 2 )){
-#echo "1-2"
+echo "1-2"
 $zapis_historii = 1
 $cas_plus_hodina = 1
 } elseif (( $usek_roku_historie -eq 2 ) -and ( $usek_roku -eq 1 )) {
-#echo "2-1"
+echo "2-1"
 $zapis_historii = 1
 $cas_minus_hodina = 1
 } elseif (( $usek_roku_historie -eq 2 ) -and ( $usek_roku -eq 3 )) {
-#echo "2-3"
+echo "2-3"
 $zapis_historii = 1
 $cas_minus_hodina = 1
 #} elseif (( $usek_roku_historie -eq 3 ) -and ( $usek_roku -eq 2 )) {
 } elseif ((( $usek_roku_historie -eq 3 ) -and ( $usek_roku -eq 2 ) -and ( $dr_historie -ne $dr ))) { # == -and == -and !=
 # tady je ochrana proti opakovanymu odecteni hodiny, kdy se program pustil znova !!
-#echo "3-2 pozor -1 hodina systemovej cas"
+echo "3-2 pozor -1 hodina systemovej cas"
 $zapis_historii = 1
 $cas_minus_hodina = 1
 
@@ -250,16 +263,17 @@ $cas_minus_hodina = 1
 $zapis_historii = 1
 #$cas_minus_hodina = 0
 #$cas_plus_hodina = 0
-#echo "nastal novy rok, zapsano do historie"
+echo "nastal novy rok, zapsano do historie"
 }
+
 
 # hlaseni o zmene casu
 if ( $zapis_historii -eq 1 ) {
 Set-Content $file -Encoding ASCII -Value $pole_file_historie_ulozit
-#echo "  ZApasano"
+echo "  ZApasano"
 sleep 1
 }else{
-#echo "  NEzapsano"
+echo "  NEzapsano"
 }
 
 #$cas_minus_hodina = 0 # testovaci radek 
@@ -267,57 +281,17 @@ sleep 1
 
 # jenom zobrazuje upozorneni, zmena casu vyzaduje prava admim. a do toho se my nechtelo... ( urob si sam )
 # kdyby se to nekomu nelibylo at si to predela, me vyhovuje takto
-$okno_text_2 = "nic"
-
-if ( $cas_plus_hodina -eq 1 ) {
 # -1 hodina
-$okno_text = "{0:dd.MM.yyyy ve HH.mm.ss}" -f $den_v_breznu
-$okno_text_2 = "Dne $okno_text hodiny, se přešlo na zimni čas +1 hodina, upravte si proto prosím systemový čas !"
-#echo $okno_text_2
+if ( $cas_plus_hodina -eq 1 ) {
+echo ""
+Write-host -ForegroundColor Red "   dne $den_v_breznu ve 02.00.00 hodiny, se preslo na letni cas +1 hodina, upravte si proto prosim systemovy cas !"
+Read-Host -Prompt "   Press ENTER to exit"
 }
 
-if ( $cas_minus_hodina -eq 1 ) { 
 # +1 hodina
-$okno_text = "{0:dd.MM.yyyy ve HH.mm.ss}" -f $den_v_rijnu
-$okno_text_2 = "Dne $okno_text hodiny, se přešlo na zimni čas -1 hodina, upravte si proto prosím systemový čas !"
-#echo $okno_text_2
+if ( $cas_minus_hodina -eq 1 ) { 
+echo ""
+Write-host -ForegroundColor Red "   dne $den_v_rijnu ve 03:00:00 hodiny, se preslo na zimni cas -1 hodina, upravte si proto prosim systemovy cas !"
+Read-Host -Prompt "   Press ENTER to exit"
 }
-
-
-# pridano 2.5.2025 zabrazi okno
-# Nacteni knihoven pro praci s okny
-if ( $okno_text_2 -notlike "nic" ) {
-Add-Type -AssemblyName System.Windows.Forms
-Add-Type -AssemblyName System.Drawing
-
-# Vytvoreni formulare s dvojnasobnou velikosti (600 x 300)
-$form = New-Object System.Windows.Forms.Form
-$form.Text = "Pozor, změna času !"
-#$form.Size = New-Object System.Drawing.Size(600,300)
-$form.Size = New-Object System.Drawing.Size(1235,200) # ok
-$form.StartPosition = "CenterScreen"
-
-# Vytvoreni popisku (Label) s upravenym textem, barvou a velikosti pisma
-$label = New-Object System.Windows.Forms.Label
-$label.Text = $okno_text_2
-#$label.Text = "Toto je vase barevne hlaseni s vetsim pisemem 2"
-
-$label.AutoSize = $true
-$label.Location = New-Object System.Drawing.Point(50,30)
-$label.ForeColor = [System.Drawing.Color]::Red      # Nastaveni barvy textu
-$label.Font = New-Object System.Drawing.Font("Arial",16,[System.Drawing.FontStyle]::Bold)  # Nastaveni vetsiho pisma
-$form.Controls.Add($label)
-
-# Vytvoreni tlacitka pro zavreni okna
-$button = New-Object System.Windows.Forms.Button
-$button.Text = "Zavřít"
-$button.Size = New-Object System.Drawing.Size(100,30)
-#$button.Location = New-Object System.Drawing.Point(250,200)
-$button.Location = New-Object System.Drawing.Point(567,100)
-$button.Add_Click({ $form.Close() })
-$form.Controls.Add($button)
-
-# Zobrazeni formulare
-$form.ShowDialog()
-} # konec okno
 
