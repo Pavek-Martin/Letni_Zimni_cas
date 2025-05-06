@@ -1,4 +1,10 @@
-osobně bych dal přednost spíše  "Sakamoto" verzi  ve starší verzi která používá funkci (get-date).add není tato funkce uživatelsky definovaná (jako v "Sakamoto") a to znamená že nejni vydět dovnitř co se uvnitř děje a hlavně a jesli se tam zbytečně neděje něco navíc co by případně zdržovalo, prostě vestavěný funkce nejsou transparentní, jak bývá jejich zvykem
-a jde o to že když program nezobrazuje žádné hlášení (což je většinou) ale je nutné aby jenom proběhnul a sním i kontrola, tak aby se tak stalo co nejrychleji a zdržoval co nejméně, protože program se spouští při každém startu nebo restartu počítače, pokud je jeho zástupce umístěn do složky "po spuštění" jak jsem doporučoval a jak ukazují přiložené screenshoty
+osobně bych dal přednost spíše  "Sakamoto" verzi  ve starší verzi která používá funkci (get-date).add 
+není tato funkce uživatelsky definovaná (jako v "Sakamoto") a to znamená že nejni vydět dovnitř co se uvnitř děje
+a hlavně a jesli se tam zbytečně neděje něco navíc co by případně zdržovalo, prostě vestavěný funkce 
+nejsou transparentní, jak bývá jejich zvykem
+a jde o to že když program nezobrazuje žádné hlášení (což je většinou) ale je nutné aby jenom proběhnul a sním i
+kontrola, tak aby se tak stalo co nejrychleji a zdržoval co nejméně, protože program se spouští při každém startu
+nebo restartu počítače, pokud je jeho zástupce umístěn do složky "po spuštění" jak jsem doporučoval a jak ukazují 
+přiložené screenshoty
 rozhodně nechci nikoho podcenovat ale vtomhle připadě bych prostě raději sáhnul po tyhle verzi
 6.5.2025
