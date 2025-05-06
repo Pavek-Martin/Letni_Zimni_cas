@@ -1,4 +1,4 @@
-osobně bych dal přednost spíše  "Sakamoto" verzi  ve starší verzi která používá funkci (get-date).AddDays()
+osobně bych dal přednost spíše  "Sakamoto" verzi  ve starší verzi (42) která používá funkci (get-date).AddDays()
 není tato funkce uživatelsky definovaná (jako v "Sakamoto") a to znamená že nejni vydět dovnitř co se uvnitř děje
 a hlavně a jesli se tam zbytečně neděje něco navíc co by případně zdržovalo, prostě vestavěný funkce 
 nejsou transparentní, jak bývá jejich zvykem
