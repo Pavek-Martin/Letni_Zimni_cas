@@ -2,7 +2,7 @@
 
 # nastaveni casu v pocitaci posun na letni nebo zimni cas v ofline rezimu
 # v teto verzi se pouziva Samamoto algotitmus na zjisteni posledni nedele v breznu a rijnu, v aktualni roce
-# start of script ( store list existing variable names )
+
 $ExistingVariables = Get-Variable | Select-Object -ExpandProperty Name
 
 # v zahlavi spusteneho okna zobrazi informoce ( neco jako echo $0 v bash )
@@ -23,11 +23,10 @@ $den = (Get-Date).Day
 $hh = (Get-Date).Hour
 #echo $hh"< hodina ted"
 
-$pole_delka_mesice = @(31,99,31,30,31,30,31,31,30,31,30,31)
+$pole_delka_mesice = @(31,28,31,30,31,30,31,31,30,31,30,31)
 # upravi se unor (99) podle toho jesli je prestupny rok nebo ne
 if (( $letos_rok % 4 -eq 0 ) -and (( $letos_rok % 100 -ne 0) -or ( $letos_rok % 400 -eq 0 ))) {
 $pole_delka_mesice[1]=29 # prestupni unor v $letos_rok
-}else{ $pole_delka_mesice[1]=28 
 }
 
 $dr = 0
