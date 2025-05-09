@@ -8,3 +8,22 @@ nebo restartu počítače, pokud je jeho zástupce umístěn do složky "po spu�
 přiložené screenshoty
 rozhodně nechci nikoho podcenovat ale vtomhle připadě bych prostě raději sáhnul po tyhle verzi
 6.5.2025
+
+doplneni 9.5.2025
+verze (42) z funkci (get-date).AddDays() si myslim ze bude pracovat z linux stampem nebo z necim takovym
+coz podle me by mohl byt a pravdepodobne je narocnejsi ale v tomto pripade vlastne zbytecnej a zdrzujici vypocet
+nezli Samamoto algoritmus a vysledek je stejny takze si myslim ze bohate "postacuje" Sakamoto verze
+progam v boot sekci se spousti denne a jenom 2x do roka neco dela, mel by tedy probehnou bleskove, paklize nic
+nedela a zaclanet co nejmin, na mym pracovnim notebootu jsem dosahnul toho ze problikne po startu dole v doku
+asi na jednu vterinu modra ikonka PowerShelu, program jsem tentokrate ani nekomiplovat (viz. zde repozitar FAQ, tedy 
+"obalovaci" metoda) protoze si myslim ze i to by v tomto pripade zbytecne zdrzovalo a pripona souboru "ps1"
+je ve Windows asociovana na PowerShell takze si ho najde a spusti si ho sam naprimo bez niceho dalsiho
+
+jeste pridam takovou uvahu:
+ono v dobach Commodoru, Atarek a ZX-ek atd. bylo vlastne vsechno transparentni a nativni, co si do toho clovek pracne
+nenahral to tam proste nemel, takze tenhle ten muj postoj a srovnani a nebo pohled na vec chcete-li, lze brat vlastne jako takovou osobnostni deformaci ale myslim si ze vlstne spravnim smerem...
+este z "jineho" soudku, tady pridam odkaz na video "co ted hybe IT svetem :)"
+https://youtube.com/watch?v=xr_izIthZWQ
+
+
+
