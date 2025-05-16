@@ -26,7 +26,7 @@ prava Administratora takze jsem toto jiz nechal na uzivateli a program pouze upo
 aby se nemohlo na nic nezapomenout
 ted v Breznu tento rok jsem zrovna zapomel v pocitaci pri prechodu na letni cas
 pridat hodinu vesele jsem na pocitaci pracoval, zmeny casu jsem si vsimnul az dodatecne
-za nekolik hodim a potom pri zalohovani (pouzivam program "robocopy") jsem se nestacil
+za nekolik hodim a potom pri zalohovani ( pouzivam program "robocopy" ) jsem se nestacil
 divit kolik jsem si zbytecne pridelal prace a nakonec stoho bylo zbytecne cely dopoledne
 zalohovani protoze progam v dusledku zmeny casoveho razitka u souboru tyto soubory vyhodnocoval
 jako pozmenene, ale pritom jejich obsah byl vlastne stejny a ruzne bylo prave akorat casove razitko
@@ -40,12 +40,20 @@ program vytvari a zapisuje do souboru historie z nazvem "historie_letni_zimni_ca
 soubor se vytvori sam po prvnim spusteni programu verze "12" nebo "13"
 a bude umisten na stejnem miste (ve stejne slozce) odkud byl spusten program "exe"
 tak program pracuje ted, paklize by nekdo chtel zmenit cestu kam se bude ukladat
-soubor historie, odkazuji na adresar "jpg/" se screenhoty, kde je ukazka jak
+soubor histrorie, odkazuji na adresar "jpg/" se screenhoty, kde je ukazka jak
 nastavit u zastupce programu pracovni adresar, defautni pracovni adresar po vytvoreni
 zastupce programu ve Windows je stejny jako ten ve kterem je program na ktery "ukazuje" 
 zastupce programu, ale toto lze v nastaveni vlastnosti zastupce programu menit
 dale je pak nutne u zastupce programu ve vlastnostech zastupce nastavit aby se program
 spustel v minimalizovanem okne, opet jsou screenshoty ve slozce "jpg/"
-
 15.5.2025
+
+
+doplnek 16.5.2025
+jeste jsem k programu pridal funkci ze bezi v minimalizovanem konzolovem okne a jenom v pripade
+chyby a nebo hlaseni o zmene casu se okno zvetsi a upozorni tim na sebe
+verze (12,13) zustala jak byla a pouze nove pridana verze (14) obsahuje toto doplneni
+
+
+
   
