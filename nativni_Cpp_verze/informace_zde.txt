@@ -1,0 +1,51 @@
+poznamky k C++ verzi
+
+jeste jsem program prepsal do C++ a tak vznikla tato nativni verze
+duvod je ten aby program ke svemu behu nepotraboval zadne dalsi API
+jako napr. PowerShell verze a vystacil si sam ze sebou, myslim
+si ze se taky program jeste zrychlil kdyz nemusi nacitat jeste nic dalsiho
+vice informaci nabyzi, repozitar FAQ PoweShell, zde na mem GitHubu
+
+jsou dve verze psal jsem o tom uz trochu ve zdrojaci ale dam to taky jeste sem
+verze "12" je co nejvice ukecana, poskytuje co nejvice informaci a verze
+"13" je tohoto opakem a je predurcena z duvodu maximalni rychlosti a beznemu
+pouzivani, protoze jak vsichni vime, nejvice se program zdrzuje prave ve chvyli
+kdy zbytecne neco vypisuje na vystup (monitor, chcete-li) obe verze jsou
+uplne stejny akorat verze "13" ma zakomentovane prislusne radky kde by se jinak
+vypisovala nejaka informace a ozve se pouze v nejnutnejsim pripade
+A) v pripade chyby, program nemuze zapisovat na disk do souboru historie
+B) paklize je potreba zmenit systemovi cas na letni a nebo na zimni
+
+program si prejmenuje podle sebe jak chcete a zastupce programu dejte do slozky
+"Po spusteni" (viz. obrazky) aby se pri kazdem spusteni pocitace kouknul jestli
+neni potreba nejak zahybat ze systemovim casem v takovem pripade vypise upozorneni
+ale dole v "docku" zustane vyset jeho ikonka v rezimu "pause" a program ceka na
+uzivatelsky vstup z klavesnice, po potvrzeni precteni informace se ukonci az potom
+je uz pak na uzivateli aby si cas v pocitaci upravil sam, jsou ktomu potreba
+prava Administratora takze jsem toto jiz nechal na uzivateli a program pouze upozorni
+aby se nemohlo na nic nezapomenout
+ted v Breznu tento rok jsem zrovna zapomel v pocitaci pri prechodu na letni cas
+pridat hodinu vesele jsem na pocitaci pracoval, zmeny casu jsem si vsimnul az dodatecne
+za nekolik hodim a potom pri zalohovani (pouzivam program "robocopy") jsem se nestacil
+divit kolik jsem si zbytecne pridelal prace a nakonec stoho bylo zbytecne cely dopoledne
+zalohovani protoze progam v dusledku zmeny casoveho razitka u souboru tyto soubory vyhodnocoval
+jako pozmenene, ale pritom jejich obsah byl vlastne stejny a ruzne bylo prave akorat casove razitko
+pri predstave ze bych tuto proceduru pravidelne podstupoval 2x rocne pri kazde zmene casu 
+tam a spatky me jimala hruza, mam pracovni notebook ktery je trvale offline cili nepouziva sluzeb
+korekce casu pres internet, NTP server apod. takze bylo potreba tohle vyresit
+program hned po startu pocitace vypise upozorneni ze je potreba upravit cas a pak teprve zacne
+zapisovat do filesystemu informace o souborech atd. ale uz se spravnym stampem
+
+program vytvari a zapisuje do souboru historie z nazvem "historie_letni_zimni_cas.txt" tento
+soubor se vytvori sam po prvnim spusteni programu verze "12" nebo "13"
+a bude umisten na stejnem miste (ve stejne slozce) odkud byl spusten program "exe"
+tak program pracuje ted, paklize by nekdo chtel zmenit cestu kam se bude ukladat
+soubor historie, odkazuji na adresar "jpg/" se screenhoty, kde je ukazka jak
+nastavit u zastupce programu pracovni adresar, defautni pracovni adresar po vytvoreni
+zastupce programu ve Windows je stejny jako ten ve kterem je program na ktery "ukazuje" 
+zastupce programu, ale toto lze v nastaveni vlastnosti zastupce programu menit
+dale je pak nutne u zastupce programu ve vlastnostech zastupce nastavit aby se program
+spustel v minimalizovanem okne, opet jsou screenshoty ve slozce "jpg/"
+
+15.5.2025
+  
