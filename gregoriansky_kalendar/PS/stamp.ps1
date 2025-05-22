@@ -1,8 +1,7 @@
 ﻿cls
-
 <#
 takle to vlastne vypada z prestupnejma vterinama, zpatky o vterinu se rozhodne jit neda
-vice muze povedet napr. toto video https://www.youtube.com/watch?v=-ypwkDR0MtI
+vice muze povodet napr. toto video https://www.youtube.com/watch?v=-ypwkDR0MtI
 nebo zde tato stranka
 https://www.unixtimestamp.com/
 #>
