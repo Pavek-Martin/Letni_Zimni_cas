@@ -2,8 +2,9 @@
 
 <#
 takle to vlastne vypada z prestupnejma vterinama, zpatky o vterinu se rozhodne jit neda
-doporucuju video na Youtube z kanalu Commputherphile, ktere se jmenuje "Unix time stamp"
-a nebo tak nejkak podobne
+vice muze povedet napr. toto video https://www.youtube.com/watch?v=-ypwkDR0MtI
+nebo zde tato stranka
+https://www.unixtimestamp.com/
 #>
 
 echo "Unix time stamp se meni kazdou vterinu inkrementaci o +1"
