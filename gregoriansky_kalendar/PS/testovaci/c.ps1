@@ -17,12 +17,10 @@ $pole_roky_output = @()
 $suma_roky = 0
 $suma_dny = 0
 
-#$min = 1700
 $min = 2025
 #$max = (( 1700 + 20 ))
 #$max = 2401
-#$max=2104
-$max = (( $min + 3300 )) # tady je moznost si jeste hrat stim druhym cislem 3300
+$max = (( $min + $(( 3300 * 2 )) )) # tady je moznost si jeste hrat stim druhym cislem 3300
 
 <#
 -eq == 
@@ -78,7 +76,7 @@ $pole_roky_output += ""
 
 #echo $pole_roky_output.Length
 
-$filename_output = "b2_"
+$filename_output = "c2_"
 $filename_output += [string] $min
 $filename_output += "-"
 $filename_output += [string] $max

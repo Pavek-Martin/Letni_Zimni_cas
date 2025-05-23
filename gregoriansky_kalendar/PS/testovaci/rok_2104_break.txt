@@ -1,0 +1,475 @@
+
+2026
+1 # pocet let
+365 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+365.2422 # pocet let krat presna delka roku tj. 365.2422
+0.242200000000025
+
+2027
+2 # pocet let
+730 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+730.4844 # pocet let krat presna delka roku tj. 365.2422
+0.484400000000051
+
+2028
+3 # pocet let
+1095 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+1095.7266 # pocet let krat presna delka roku tj. 365.2422
+0.726599999999962
+
+2029
+4 # pocet let
+1461 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+1460.9688 # pocet let krat presna delka roku tj. 365.2422
+0.0311999999998989
+
+2030
+5 # pocet let
+1826 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+1826.211 # pocet let krat presna delka roku tj. 365.2422
+0.21100000000024
+
+2031
+6 # pocet let
+2191 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+2191.4532 # pocet let krat presna delka roku tj. 365.2422
+0.453199999999924
+
+2032
+7 # pocet let
+2556 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+2556.6954 # pocet let krat presna delka roku tj. 365.2422
+0.695400000000063
+
+2033
+8 # pocet let
+2922 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+2921.9376 # pocet let krat presna delka roku tj. 365.2422
+0.0623999999997977
+
+2034
+9 # pocet let
+3287 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+3287.1798 # pocet let krat presna delka roku tj. 365.2422
+0.179800000000341
+
+2035
+10 # pocet let
+3652 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+3652.422 # pocet let krat presna delka roku tj. 365.2422
+0.42200000000048
+
+2036
+11 # pocet let
+4017 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+4017.6642 # pocet let krat presna delka roku tj. 365.2422
+0.664200000000164
+
+2037
+12 # pocet let
+4383 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+4382.9064 # pocet let krat presna delka roku tj. 365.2422
+0.0936000000001513
+
+2038
+13 # pocet let
+4748 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+4748.1486 # pocet let krat presna delka roku tj. 365.2422
+0.148600000000442
+
+2039
+14 # pocet let
+5113 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+5113.3908 # pocet let krat presna delka roku tj. 365.2422
+0.390800000000127
+
+2040
+15 # pocet let
+5478 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+5478.633 # pocet let krat presna delka roku tj. 365.2422
+0.63300000000072
+
+2041
+16 # pocet let
+5844 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+5843.8752 # pocet let krat presna delka roku tj. 365.2422
+0.124799999999595
+
+2042
+17 # pocet let
+6209 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+6209.1174 # pocet let krat presna delka roku tj. 365.2422
+0.117400000000089
+
+2043
+18 # pocet let
+6574 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+6574.3596 # pocet let krat presna delka roku tj. 365.2422
+0.359600000000682
+
+2044
+19 # pocet let
+6939 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+6939.6018 # pocet let krat presna delka roku tj. 365.2422
+0.601800000000367
+
+2045
+20 # pocet let
+7305 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+7304.844 # pocet let krat presna delka roku tj. 365.2422
+0.15599999999904
+
+2046
+21 # pocet let
+7670 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+7670.0862 # pocet let krat presna delka roku tj. 365.2422
+0.0862000000006446
+
+2047
+22 # pocet let
+8035 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+8035.3284 # pocet let krat presna delka roku tj. 365.2422
+0.328400000000329
+
+2048
+23 # pocet let
+8400 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+8400.5706 # pocet let krat presna delka roku tj. 365.2422
+0.570600000000923
+
+2049
+24 # pocet let
+8766 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+8765.8128 # pocet let krat presna delka roku tj. 365.2422
+0.187200000000303
+
+2050
+25 # pocet let
+9131 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+9131.055 # pocet let krat presna delka roku tj. 365.2422
+0.055000000000291
+
+2051
+26 # pocet let
+9496 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+9496.2972 # pocet let krat presna delka roku tj. 365.2422
+0.297200000000885
+
+2052
+27 # pocet let
+9861 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+9861.5394 # pocet let krat presna delka roku tj. 365.2422
+0.539400000001478
+
+2053
+28 # pocet let
+10227 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+10226.7816 # pocet let krat presna delka roku tj. 365.2422
+0.218399999999747
+
+2054
+29 # pocet let
+10592 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+10592.0238 # pocet let krat presna delka roku tj. 365.2422
+0.0238000000008469
+
+2055
+30 # pocet let
+10957 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+10957.266 # pocet let krat presna delka roku tj. 365.2422
+0.266000000001441
+
+2056
+31 # pocet let
+11322 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+11322.5082 # pocet let krat presna delka roku tj. 365.2422
+0.508200000000215
+
+2057
+32 # pocet let
+11688 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+11687.7504 # pocet let krat presna delka roku tj. 365.2422
+0.249599999999191
+
+2058
+33 # pocet let
+12053 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+12052.9926 # pocet let krat presna delka roku tj. 365.2422
+0.0073999999985972
+
+2059
+34 # pocet let
+12418 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+12418.2348 # pocet let krat presna delka roku tj. 365.2422
+0.234800000000178
+
+2060
+35 # pocet let
+12783 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+12783.477 # pocet let krat presna delka roku tj. 365.2422
+0.477000000000771
+
+2061
+36 # pocet let
+13149 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+13148.7192 # pocet let krat presna delka roku tj. 365.2422
+0.280799999998635
+
+2062
+37 # pocet let
+13514 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+13513.9614 # pocet let krat presna delka roku tj. 365.2422
+0.0385999999998603
+
+2063
+38 # pocet let
+13879 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+13879.2036 # pocet let krat presna delka roku tj. 365.2422
+0.203600000000733
+
+2064
+39 # pocet let
+14244 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+14244.4458 # pocet let krat presna delka roku tj. 365.2422
+0.445800000001327
+
+2065
+40 # pocet let
+14610 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+14609.688 # pocet let krat presna delka roku tj. 365.2422
+0.311999999998079
+
+2066
+41 # pocet let
+14975 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+14974.9302 # pocet let krat presna delka roku tj. 365.2422
+0.0697999999993044
+
+2067
+42 # pocet let
+15340 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+15340.1724 # pocet let krat presna delka roku tj. 365.2422
+0.172400000001289
+
+2068
+43 # pocet let
+15705 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+15705.4146 # pocet let krat presna delka roku tj. 365.2422
+0.414600000001883
+
+2069
+44 # pocet let
+16071 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+16070.6568 # pocet let krat presna delka roku tj. 365.2422
+0.343199999999342
+
+2070
+45 # pocet let
+16436 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+16435.899 # pocet let krat presna delka roku tj. 365.2422
+0.100999999998749
+
+2071
+46 # pocet let
+16801 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+16801.1412 # pocet let krat presna delka roku tj. 365.2422
+0.141200000001845
+
+2072
+47 # pocet let
+17166 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+17166.3834 # pocet let krat presna delka roku tj. 365.2422
+0.383400000002439
+
+2073
+48 # pocet let
+17532 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+17531.6256 # pocet let krat presna delka roku tj. 365.2422
+0.374400000000605
+
+2074
+49 # pocet let
+17897 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+17896.8678 # pocet let krat presna delka roku tj. 365.2422
+0.132200000000012
+
+2075
+50 # pocet let
+18262 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+18262.11 # pocet let krat presna delka roku tj. 365.2422
+0.110000000000582
+
+2076
+51 # pocet let
+18627 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+18627.3522 # pocet let krat presna delka roku tj. 365.2422
+0.352200000001176
+
+2077
+52 # pocet let
+18993 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+18992.5944 # pocet let krat presna delka roku tj. 365.2422
+0.40559999999823
+
+2078
+53 # pocet let
+19358 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+19357.8366 # pocet let krat presna delka roku tj. 365.2422
+0.163399999997637
+
+2079
+54 # pocet let
+19723 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+19723.0788 # pocet let krat presna delka roku tj. 365.2422
+0.0788000000029569
+
+2080
+55 # pocet let
+20088 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+20088.321 # pocet let krat presna delka roku tj. 365.2422
+0.320999999999913
+
+2081
+56 # pocet let
+20454 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+20453.5632 # pocet let krat presna delka roku tj. 365.2422
+0.436799999999494
+
+2082
+57 # pocet let
+20819 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+20818.8054 # pocet let krat presna delka roku tj. 365.2422
+0.1945999999989
+
+2083
+58 # pocet let
+21184 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+21184.0476 # pocet let krat presna delka roku tj. 365.2422
+0.0476000000016938
+
+2084
+59 # pocet let
+21549 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+21549.2898 # pocet let krat presna delka roku tj. 365.2422
+0.289800000002288
+
+2085
+60 # pocet let
+21915 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+21914.532 # pocet let krat presna delka roku tj. 365.2422
+0.467999999997119
+
+2086
+61 # pocet let
+22280 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+22279.7742 # pocet let krat presna delka roku tj. 365.2422
+0.225800000000163
+
+2087
+62 # pocet let
+22645 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+22645.0164 # pocet let krat presna delka roku tj. 365.2422
+0.0164000000004307
+
+2088
+63 # pocet let
+23010 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+23010.2586 # pocet let krat presna delka roku tj. 365.2422
+0.258600000001024
+
+2089
+64 # pocet let
+23376 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+23375.5008 # pocet let krat presna delka roku tj. 365.2422
+0.499199999998382
+
+2090
+65 # pocet let
+23741 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+23740.743 # pocet let krat presna delka roku tj. 365.2422
+0.256999999997788
+
+2091
+66 # pocet let
+24106 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+24105.9852 # pocet let krat presna delka roku tj. 365.2422
+0.0147999999971944
+
+2092
+67 # pocet let
+24471 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+24471.2274 # pocet let krat presna delka roku tj. 365.2422
+0.227400000003399
+
+2093
+68 # pocet let
+24837 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+24836.4696 # pocet let krat presna delka roku tj. 365.2422
+0.530399999999645
+
+2094
+69 # pocet let
+25202 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+25201.7118 # pocet let krat presna delka roku tj. 365.2422
+0.288199999999051
+
+2095
+70 # pocet let
+25567 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+25566.954 # pocet let krat presna delka roku tj. 365.2422
+0.0459999999984575
+
+2096
+71 # pocet let
+25932 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+25932.1962 # pocet let krat presna delka roku tj. 365.2422
+0.196200000002136
+
+2097
+72 # pocet let
+26298 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+26297.4384 # pocet let krat presna delka roku tj. 365.2422
+0.56159999999727
+
+2098
+73 # pocet let
+26663 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+26662.6806 # pocet let krat presna delka roku tj. 365.2422
+0.319399999996676
+
+2099
+74 # pocet let
+27028 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+27027.9228 # pocet let krat presna delka roku tj. 365.2422
+0.0771999999997206
+
+2100
+75 # pocet let
+27393 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+27393.165 # pocet let krat presna delka roku tj. 365.2422
+0.165000000000873
+
+2101
+76 # pocet let
+27758 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+27758.4072 # pocet let krat presna delka roku tj. 365.2422
+0.407200000001467
+
+2102
+77 # pocet let
+28123 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+28123.6494 # pocet let krat presna delka roku tj. 365.2422
+0.649400000002061
+
+2103
+78 # pocet let
+28488 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+28488.8916 # pocet let krat presna delka roku tj. 365.2422
+0.891600000002654
+
+2104
+79 # pocet let
+28853 # celkem dnu se spravnym zapoctem vsech prestupnych a neprestupnych let
+28854.1338 # pocet let krat presna delka roku tj. 365.2422
+1.13380000000325
+
